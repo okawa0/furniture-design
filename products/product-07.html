@@ -7,7 +7,7 @@
     <meta name="description" content="商品詳細ページです。" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <script src="../assets/js/script.js" defer></script>
+    <script src="../assets/js/load-layout.js"></script>
   </head>
   <body>
     <div id="header"></div>
@@ -68,69 +68,5 @@
       <p class="product-back">Back To Products</p>
     </a>
     <div id="footer"></div>
-    <script>
-      fetch("header.html")
-        .then((res) => res.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-        });
-      fetch("../footer.html")
-        .then((res) => res.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        });
-      // ヘッダーとフッターを読み込んでから、JSを実行
-      Promise.all([
-        fetch("header.html").then((res) => res.text()),
-        fetch("../footer.html").then((res) => res.text()),
-      ]).then(([headerData, footerData]) => {
-        document.getElementById("header").innerHTML = headerData;
-        document.getElementById("footer").innerHTML = footerData;
-
-        // HTML反映を待ってから処理
-        const wait = setInterval(() => {
-          const menuButton = document.getElementById(
-            "interior-store-index-header-nav"
-          );
-          const overlay = document.getElementById(
-            "interior-store-index-overlay"
-          );
-          const sideMenu = document.getElementById(
-            "interior-store-index-sideMenu"
-          );
-
-          if (menuButton && overlay && sideMenu) {
-            clearInterval(wait);
-            let isMenuOpen = false;
-
-            menuButton.addEventListener("click", () => {
-              menuButton.classList.toggle("active");
-              overlay.classList.toggle("active");
-              sideMenu.classList.toggle("active");
-              document.body.style.overflow = isMenuOpen ? "" : "hidden";
-              isMenuOpen = !isMenuOpen;
-            });
-
-            overlay.addEventListener("click", () => {
-              menuButton.classList.remove("active");
-              overlay.classList.remove("active");
-              sideMenu.classList.remove("active");
-              document.body.style.overflow = "";
-              isMenuOpen = false;
-            });
-
-            document.addEventListener("keydown", (e) => {
-              if (e.key === "Escape" && isMenuOpen) {
-                menuButton.classList.remove("active");
-                overlay.classList.remove("active");
-                sideMenu.classList.remove("active");
-                document.body.style.overflow = "";
-                isMenuOpen = false;
-              }
-            });
-          }
-        }, 100);
-      });
-    </script>
   </body>
 </html>

@@ -1,39 +1,46 @@
-const menuButton = document.getElementById('interior-store-index-header-nav');
-const overlay = document.getElementById('interior-store-index-overlay');
-const sideMenu = document.getElementById('interior-store-index-sideMenu');
+/**
+ * ヘッダーのハンバーガーメニュー開閉
+ * load-layout.js でヘッダー挿入後に読み込まれることを想定
+ */
+(function () {
+  var menuButton = document.getElementById("interior-store-index-header-nav");
+  var overlay = document.getElementById("interior-store-index-overlay");
+  var sideMenu = document.getElementById("interior-store-index-sideMenu");
 
-let isMenuOpen = false;
+  if (!menuButton || !overlay || !sideMenu) return;
 
-menuButton.addEventListener('click', toggleMenu);
+  var isMenuOpen = false;
 
-overlay.addEventListener('click', closeMenu);
+  function openMenu() {
+    menuButton.classList.add("active");
+    overlay.classList.add("active");
+    sideMenu.classList.add("active");
+    document.body.style.overflow = "hidden";
+    isMenuOpen = true;
+  }
 
-function toggleMenu() {
-  if (isMenuOpen) {
+  function closeMenu() {
+    menuButton.classList.remove("active");
+    overlay.classList.remove("active");
+    sideMenu.classList.remove("active");
+    document.body.style.overflow = "";
+    isMenuOpen = false;
+  }
+
+  function toggleMenu() {
+    if (isMenuOpen) {
       closeMenu();
-  } else {
+    } else {
       openMenu();
+    }
   }
-}
 
-function openMenu() {
-  menuButton.classList.add('active');
-  overlay.classList.add('active');
-  sideMenu.classList.add('active');
-  document.body.style.overflow = 'hidden';
-  isMenuOpen = true;
-}
+  menuButton.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", closeMenu);
 
-function closeMenu() {
-  menuButton.classList.remove('active');
-  overlay.classList.remove('active');
-  sideMenu.classList.remove('active');
-  document.body.style.overflow = '';
-  isMenuOpen = false;
-}
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && isMenuOpen) {
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && isMenuOpen) {
       closeMenu();
-  }
-});
+    }
+  });
+})();

@@ -1,6 +1,5 @@
 /**
  * ヘッダーのハンバーガーメニュー開閉
- * load-layout.js でヘッダー挿入後に読み込まれることを想定
  */
 (function () {
   const menuButton = document.getElementById("interior-store-index-header-nav");

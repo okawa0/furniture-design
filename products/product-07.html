@@ -7,10 +7,30 @@
     <meta name="description" content="商品詳細ページです。" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <script src="../assets/js/load-layout.js"></script>
   </head>
   <body>
-    <div id="header"></div>
+    <header class="interior-store-index-header">
+      <a href="../index.html" class="interior-store-index-header-link">
+        <h1 class="interior-store-index-header-title">Furniture Design</h1>
+      </a>
+      <nav
+        class="interior-store-index-header-nav"
+        id="interior-store-index-header-nav"
+      >
+        <div class="interior-store-index-header-nav-line"></div>
+        <div class="interior-store-index-header-nav-line"></div>
+      </nav>
+    </header>
+    <div
+      class="interior-store-index-overlay"
+      id="interior-store-index-overlay"
+    ></div>
+    <nav class="interior-store-index-side-menu" id="interior-store-index-sideMenu">
+      <a href="products.html" class="interior-store-index-menu-item">PRODUCTS</a>
+      <a href="../about.html" class="interior-store-index-menu-item">ABOUT</a>
+      <a href="../company.html" class="interior-store-index-menu-item">COMPANY</a>
+      <a href="mailto:example@example.com" class="interior-store-index-menu-item">CONTACT</a>
+    </nav>
     <h1 class="products-index-title">デザイン性の高いデスクと白いチェア</h1>
     <div class="product-container">
       <img
@@ -67,6 +87,14 @@
     <a href="products.html" class="product-back-link">
       <p class="product-back">Back To Products</p>
     </a>
-    <div id="footer"></div>
+    <footer class="interior-store-index-footer">
+      <div class="interior-store-index-footer-sns">
+        <p class="interior-store-index-footer-sns-item">INSTAGRAM</p>
+        <p class="interior-store-index-footer-sns-item">TWITTER</p>
+        <p class="interior-store-index-footer-sns-item">FACEBOOK</p>
+      </div>
+      <small class="interior-store-index-footer-copyright">© Furniture Design</small>
+    </footer>
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>

@@ -7,15 +7,43 @@
     <meta name="description" content="インテリアショップのプロフィールページです。" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/load-layout.js"></script>
   </head>
   <body>
-    <div id="header"></div>
+    <header class="interior-store-index-header">
+      <a href="index.html" class="interior-store-index-header-link">
+        <h1 class="interior-store-index-header-title">Furniture Design</h1>
+      </a>
+      <nav
+        class="interior-store-index-header-nav"
+        id="interior-store-index-header-nav"
+      >
+        <div class="interior-store-index-header-nav-line"></div>
+        <div class="interior-store-index-header-nav-line"></div>
+      </nav>
+    </header>
+    <div
+      class="interior-store-index-overlay"
+      id="interior-store-index-overlay"
+    ></div>
+    <nav class="interior-store-index-side-menu" id="interior-store-index-sideMenu">
+      <a href="products/products.html" class="interior-store-index-menu-item">PRODUCTS</a>
+      <a href="about.html" class="interior-store-index-menu-item">ABOUT</a>
+      <a href="company.html" class="interior-store-index-menu-item">COMPANY</a>
+      <a href="mailto:example@example.com" class="interior-store-index-menu-item">CONTACT</a>
+    </nav>
     <main class="about-main">
       <h1 class="about-title">About</h1>
       <p class="about-paragraph">私たちは、北欧の美しいデザインと日本の暮らしやすさを融合させたインテリアブランドです。2020年の設立以来、少人数精鋭のチームで、家具や雑貨、照明の企画から生産、販売まで一貫して手がけています。<br><br>現地から直接仕入れる輸入家具は、素材感やディテールにこだわり抜いた逸品ばかり。日常を豊かにする雑貨や、空間を魅力的に照らす照明も多数ラインナップ。店舗では手触りや質感を体験でき、オンラインストアからは全国どこからでもお届けします。</p>
       <p class="about-paragraph">「好きな空間で、好きな時間を過ごす」──そのシンプルな喜びを、インテリア好きのすべての人に届けるため、私たちは日々新しいデザインを創り続けています。</p>
     </main>
-    <div id="footer"></div>
+    <footer class="interior-store-index-footer">
+      <div class="interior-store-index-footer-sns">
+        <p class="interior-store-index-footer-sns-item">INSTAGRAM</p>
+        <p class="interior-store-index-footer-sns-item">TWITTER</p>
+        <p class="interior-store-index-footer-sns-item">FACEBOOK</p>
+      </div>
+      <small class="interior-store-index-footer-copyright">© Furniture Design</small>
+    </footer>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

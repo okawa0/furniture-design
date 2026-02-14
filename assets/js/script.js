@@ -3,13 +3,13 @@
  * load-layout.js でヘッダー挿入後に読み込まれることを想定
  */
 (function () {
-  var menuButton = document.getElementById("interior-store-index-header-nav");
-  var overlay = document.getElementById("interior-store-index-overlay");
-  var sideMenu = document.getElementById("interior-store-index-sideMenu");
+  const menuButton = document.getElementById("interior-store-index-header-nav");
+  const overlay = document.getElementById("interior-store-index-overlay");
+  const sideMenu = document.getElementById("interior-store-index-sideMenu");
 
   if (!menuButton || !overlay || !sideMenu) return;
 
-  var isMenuOpen = false;
+  let isMenuOpen = false;
 
   function openMenu() {
     menuButton.classList.add("active");

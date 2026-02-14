@@ -22,7 +22,7 @@
   }
 
   function loadScript(src, callback) {
-    var s = document.createElement("script");
+    const s = document.createElement("script");
     s.src = src;
     s.onload = callback || function () {};
     document.body.appendChild(s);
@@ -33,8 +33,8 @@
     fetch(footerPath).then(function (res) { return res.text(); }),
   ])
     .then(function (results) {
-      var headerEl = document.getElementById("header");
-      var footerEl = document.getElementById("footer");
+      const headerEl = document.getElementById("header");
+      const footerEl = document.getElementById("footer");
       if (headerEl) {
         headerEl.innerHTML = results[0];
         applyLinkPrefix(headerEl);

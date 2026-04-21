@@ -1,8 +1,21 @@
-/**
- * ヘッダーのハンバーガーメニュー開閉
- */
-(function () {
-  const menuButton = document.getElementById("interior-store-index-header-nav");
+// fetchによるヘッダーとフッターの共通化
+async function loadComponent(id, path) {
+  const res = await fetch(path);
+  const html = await res.text();
+  document.getElementById(id).innerHTML = html;
+}
+
+// ヘッダーとフッターを並行して読み込む
+Promise.all([
+  loadComponent('header', '/furniture-design/header.html'),
+  loadComponent('footer', '/furniture-design/footer.html'),
+]).then(() => {
+  initHamburger();
+});
+
+// ハンバーガーメニュー
+function initHamburger() {
+const menuButton = document.getElementById("interior-store-index-header-nav");
   const overlay = document.getElementById("interior-store-index-overlay");
   const sideMenu = document.getElementById("interior-store-index-sideMenu");
 
@@ -42,4 +55,4 @@
       closeMenu();
     }
   });
-})();
+}

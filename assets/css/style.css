@@ -171,25 +171,26 @@ body .interior-store-index-wrapper .interior-store-index-main .interior-store-in
     grid-template-columns: repeat(2, 1fr);
   }
 }
-body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item-link {
+body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item .interior-store-index-item-link {
+  display: block;
   text-decoration: none;
   color: #000;
   transition: color 0.3s ease;
 }
-body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item-link:hover {
+body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item .interior-store-index-item-link:hover {
   color: #666;
 }
-body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item-link .interior-store-index-item img {
+body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item .interior-store-index-item-link img {
   transition: color 0.3s ease;
 }
-body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item-link .interior-store-index-item img:hover {
+body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item .interior-store-index-item-link img:hover {
   opacity: 0.8;
 }
-body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item-link .interior-store-index-item .interior-store-index-item-name {
+body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item .interior-store-index-item-link .interior-store-index-item-name {
   margin: 1rem 0 0.5rem;
   font-size: 12px;
 }
-body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item-link .interior-store-index-item .interior-store-index-item-price {
+body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-items .interior-store-index-items-list .interior-store-index-item .interior-store-index-item-link .interior-store-index-item-price {
   font-size: 12px;
 }
 body .interior-store-index-wrapper .interior-store-index-main .interior-store-index-more {
